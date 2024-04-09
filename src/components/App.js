@@ -45,19 +45,22 @@ const App = () => {
     return `${pad(minutes)}:${pad(seconds)}:${pad(centiseconds)}`;
   };
 
-  return (
-    <div>
-      <div>{formatTime(time)}</div>
-      <button onClick={running ? stopTimer : startTimer}>{running ? 'Stop' : 'Start'}</button>
-      <button onClick={lapTimer} disabled={!running}>Lap</button>
-      <button onClick={resetTimer}>Reset</button>
-      <ul>
-        {laps.map((lap, index) => (
-          <li key={index}>{formatTime(lap)}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  const App = () => {
+    return (
+      <div>
+        <div>
+          <div>{formatTime(time)}</div>
+          <button onClick={running ? stopTimer : startTimer}>{running ? 'Stop' : 'Start'}</button>
+          <button onClick={lapTimer} disabled={!running}>Lap</button>
+          <button onClick={resetTimer}>Reset</button>
+          <ul>
+            {laps.map((lap, index) => (
+              <li key={index}>{formatTime(lap)}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  }
 };
-
-export default App
+  export default App
