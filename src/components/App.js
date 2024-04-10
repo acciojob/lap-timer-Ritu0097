@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import React,{ useState, useEffect, useRef } from 'react';
 
 const App = () => {
   const [time, setTime] = useState(0);
@@ -42,7 +42,7 @@ const App = () => {
     const centiseconds = time % 100;
     return `${pad(minutes)}:${pad(seconds)}:${pad(centiseconds)}`;
   };
-  //main logic is here
+
   return (
     <div>
       <div>{formatTime(time)}</div>
