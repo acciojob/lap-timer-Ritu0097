@@ -42,7 +42,7 @@ const App = () => {
     const centiseconds = time % 100;
     return `${pad(minutes)}:${pad(seconds)}:${pad(centiseconds)}`;
   };
-
+// main logic
   return (
     <div>
       <div>{formatTime(time)}</div>
